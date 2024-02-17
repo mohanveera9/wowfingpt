@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FinGPT - Unleasing The Power of AI in Financial Analaysis</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="static/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="static/css/style.css" rel="stylesheet" >
+    <style>
+        .text-mohan{
+            color: white;
+        }
+        .bg-mohan{
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="m-0">WoW FinGPT</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#Service" class="nav-item nav-link">Service</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="#Roadmap" class="dropdown-item">Roadmap</a>
+                                <a href="#FAQs " class="dropdown-item">FAQs</a>
+                            </div>
+                        </div>
+                        <a href="#Contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="/whitepaper" class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">Book a Demo</a>
+                </div>
+            </nav>
+
+            <div class="container-xxl bg-primary hero-header">
+                <div class="container">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated zoomIn">Revolutionizing Stock Market Intelligence</h1>
+                            <p class="text-white pb-3 animated zoomIn">Welcome to WoW FinGPT, your ultimate financial analysis tool powered by predictive AI. Our cutting-edge technology is designed to assist investors and traders in making informed decisions and seizing growth opportunities in the market.</p>
+                            <a href="/chat" class="btn btn-outline-light rounded-pill border-2 py-3 px-5 animated slideInRight">Chat Now</a>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <img class="img-fluid animated zoomIn" src="static/img/hero.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-6" id="about">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
+                        <img class="img-fluid" src="static/img/about.png">
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">About Us</div>
+                        <h2 class="mb-4">Exploring WoW FinGPT Stock Market Insights and Analysis</h2>
+                        <p class="mb-4">Welcome to FinGPT, your premier destination for comprehensive stock market details and insightful analysis</p>
+                        <div class="row g-3 mb-4">
+                            <div class="col-12 d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-search text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h6>Predictive Models</h6>
+                                    <span>Our platform utilizes sophisticated predictive models to forecast future stock prices, trends, and market sentiment.</span>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-chart-line text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h6>Financial Analysis</h6>
+                                    <span> We provide up-to-date information on various stocks, including prices, trends, and historical data.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Newsletter Start -->
+        <div class="container-xxl bg-primary my-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container px-lg-5">
+                <div class="row align-items-center" style="height: 250px;">
+                    <div class="col-12 col-md-6">
+                        <h3 class="text-white">Ready to get started</h3>
+                        <small class="text-white">Stay informed with WoW FinGPT Newsletter, delivering expert market insights</small>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center mb-n5 d-none d-md-block">
+                        <img class="img-fluid mt-5" style="max-height: 250px;" src="static/img/newsletter.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter End -->
+
+
+        <!-- Service Start -->
+        <div class="container-xxl py-6" id="Service">
+            <div class="container">
+                <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Our Services</div>
+                    <h2 class="mb-5"> Discover the Future of Stock Market Analysis with WoW FinGPT</h2>
+                </div>
+                <div class="row g-4" >
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded h-100">
+                            <div class="d-flex justify-content-between">
+                                <div class="service-icon">
+                                    <i class="fa fa-question-circle fa-2x"></i>
+                                </div>
+                                <a class="service-btn" href="/chat">
+                                    <i class="fa fa-link fa-2x"></i>
+                                </a>
+                            </div>
+                            <div class="p-5">
+                                <h5 class="mb-3" id="box2">Q/A Section</h5>
+                                <span>Explore finance effortlessly with our FinGPT Finance Bot.It's your go-to companion for quick answers on investment strategies.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded h-100">
+                            <div class="p-5">
+                                <h5 class="mb-3" id="box2" >Coming Soon...</h5>
+                                <span style="display: none;">Coming Soon...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded h-100">
+                            <div class="p-5">
+                                <h5 class="mb-3" id="box2" >Coming Soon...</h5>
+                                <span style="display: none;">Coming Soon...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+        <!-- Features Start -->
+        <style>
+            .blurry {
+                filter: blur(5px); /* Add blur effect */
+            }
+        
+            #comingSoonContent:hover .blurry {
+                filter: none; /* Remove blur effect on hover */
+            }
+        
+            #comingSoonText {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                text-align: center;
+            }
+        </style>
+        <div class="container-xxl py-6 bg-primary" id="Features">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-inline-block border rounded-pill text-mohan px-4 mb-3">Features</div>
+                        <h2 class="mb-4 text-white">Financial analysis and insights with below Features.</h2>
+                        <p class="text-white">
+                            Presenting FinGPT – the ultimate solution for accurate and
+                            investment and trading analysis. Empower yourself to stay in command
+                            of your financial strategy, make informed decisions, and
+                            seize growth prospects. Step into the forefront of predictive
+                            analytics with FinGPT.</p>
+                    </div>
+                    <div class="col-lg-7 wow fadeIn" data-wow-delay="0.1s" id="comingSoonContent" style="position: relative;">
+                        <div class="blurry">
+                            <div class="row g-5">
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="flex-shrink-0 btn-square bg-white rounded-circle me-3">
+                                            <i class="fa  fa-chart-line "></i>
+                                        </div>
+                                        <h6 class="mb-0">Profit and Loss Analysis</h6>
+                                    </div>
+                                    <span style="color: white;">Profit and Loss Analysis Input the startup's historical and projected financial data.</span>
+                                </div>
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="flex-shrink-0 btn-square bg-white rounded-circle me-3">
+                                            <i class="fa fa-money-check-alt"></i>
+                                        </div>
+                                        <h6 class="mb-0">Cash Flow Analysis</h6>
+                                    </div>
+                                    <span style="color: white;">Input the startup's cash flow statements to analyze its cash inflows and outflows.</span>
+                                </div>
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="flex-shrink-0 btn-square bg-white rounded-circle me-3">
+                                            <i class="fa fa-search-dollar"></i>
+                                        </div>
+                                        <h6 class="mb-0">Valuation Analysis</h6>
+                                    </div>
+                                    <span style="color: white;">Input the startup's financial data and fundraising assumptions..</span>
+                                </div>
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="flex-shrink-0 btn-square bg-white rounded-circle me-3">
+                                            <i class="fa fa-chart-line"></i>
+                                        </div>
+                                        <h6 class="mb-0">Fundraising Strategy</h6>
+                                    </div>
+                                    <span style="color: white;">Input the startup's capital requirements and growth plans.</span>
+                                </div>
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="flex-shrink-0 btn-square bg-white rounded-circle me-3">
+                                            <i class="fa fa-object-group"></i>
+                                        </div>
+                                        <h6 class="mb-0">Diversification Strategy</h6>
+                                    </div>
+                                    <span style="color: white;">Input the startup's industry and competitive landscape to identify potential diversification opportunities.</span>
+                                </div>
+                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.6s">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="flex-shrink-0 btn-square bg-white rounded-circle me-3">
+                                            <i class="fa fa-tint"></i>
+                                        </div>
+                                        <h6 class="mb-0">Liquidity Analysis</h6>
+                                    </div>
+                                    <span  style="color: white;">Input the company's balance sheet and cash flow statement to asses its liquidity position.</span>
+                                </div>
+                            </div>    
+                        </div>
+                        <div id="comingSoonText">
+                            <h2>Coming Soon</h2>
+                            <p>Click to Discover More</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features End --> 
+        <!-- Roadmap Start -->
+        <div class="container-xxl py-5" id="Roadmap">
+            <div class="container">
+                <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                    <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Roadmap</div>
+                    <h1 class="display-6">Roadmap</h1>
+                    <p class="text-primary fs-5 mb-5">We Translate Your Dream Into Reality</p>
+                </div>
+                <div class="owl-carousel roadmap-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="roadmap-item">
+                        <div class="roadmap-point"><span></span></div>
+                        <h5>User Query</h5>
+                        <span>Discover stock market secrets with precision.</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-point"><span></span></div>
+                        <h5>Emotional Review</h5>
+                        <span>Unveil company worth for informed decisions</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-point"><span></span></div>
+                        <h5>Technical Analysis</h5>
+                        <span>Decode market sentiment for strategic maneuvers.</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-point"><span></span></div>
+                        <h5>Technical Analysis</h5>
+                        <span>Unlock profit path with advanced analytics</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-point"><span></span></div>
+                        <h5>Fusion Synthesis</h5>
+                        <span>Merge analysis realms for comprehensive strategies.</span>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-point"><span></span></div>
+                        <h5>Generation Process</h5>
+                        <span>AI crafts tailored, actionable market insights!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Roadmap End -->
+    <!-- FAQs Start -->
+    <div class="container-xxl py-5" id="FAQs">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">FAQs</div>
+                <h1 class="display-6">FAQs</h1>
+                <p class="text-primary fs-5 mb-5">Frequently Asked Questions</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.1s">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    My company's debt-to-equity ratio is higher than industry average. What steps should I take to address this?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    A high debt-to-equity ratio can be concerning. Start by reviewing your debt structure and consider renegotiating terms or refinancing to more favorable conditions. Exploring ways to increase equity, such as retaining more earnings or issuing new shares, might also be beneficial. Analyzing and improving operational efficiencies can also help generate more cash flow to service debt.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    I want to start investing in stocks but am concerned about volatility. How should I approach this?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    When starting with stocks, it's important to focus on building a diversified portfolio to mitigate risk. Consider starting with a mix of growth and dividend stocks. Also, educate yourself about market trends and the fundamentals of the companies you invest in. Starting small and gradually increasing your investment as you gain confidence and understanding can also be a wise approach.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.3s">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Interest rates are fluctuating a lot recently. How should this affect my bond investment strategy?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    In a fluctuating interest rate environment, consider a ladder strategy for your bond investments, where you invest in bonds with varying maturities. This can help manage the risk associated with interest rate changes. Also, staying informed about economic forecasts can help you make more timely decisions about your bond investments.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    I've invested in a few mutual funds, but how do I know if I'm diversified enough?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    To assess your diversification, look beyond just the number of funds. Examine the sectors, industries, and geographical locations your funds are invested in. Additionally, consider different asset classes like stocks, bonds, and real estate. Reviewing your portfolio in relation to your risk tolerance and investment goals is also key in ensuring adequate diversification.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.5s">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    I want to understand how to use balance sheet analysis to predict a company's future success. What should I focus on?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">Focus on key indicators like liquidity ratios, asset turnover, and leverage ratios. Analyze how well the company manages its assets and liabilities and how this has changed over time. Understanding the industry context and the company's strategic initiatives will also provide insights into future performance.Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    My business shows good profitability, but our balance sheet seems weak. What might be the cause?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Even with good profits, issues like high levels of short-term debt, slow inventory turnover, or large accounts receivable can weaken the balance sheet. It's important to analyze these areas in detail. Improving collection processes and inventory management, and restructuring debt, can help strengthen your balance sheet.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.7s">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    How can I determine the fair value of a stock before investing?
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Evaluating the fair value of a stock involves analyzing various factors such as earnings growth potential, industry comparables, and future cash flows. Utilizing valuation methods like discounted cash flow (DCF) analysis or price-to-earnings (P/E) ratios can help in assessing whether a stock is trading at a reasonable price.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
+                            <h2 class="accordion-header" id="headingEight">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    What are the key indicators of a company's financial health?
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Key indicators of a company's financial health include profitability ratios , liquidity ratios , leverage ratios , and efficiency ratios . Analyzing these metrics can provide insights into the company's performance and stability.
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQs Start -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;" id="Contact">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Banglaore</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope me-3"></i>wowfingpt@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61554255397216&sfnsn=wiwspwa&mibextid=2JQ9oc"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/wow_fingpt?utm_source=qr&igsh=YnRvdmxqa3Uzb2Y0"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Quick Link</h5> 
+                        <a class="btn btn-link" href="#about">About Us</a>
+                        <a class="btn btn-link" href="#Service">Services</a>
+                        <a class="btn btn-link" href="#Features">Features</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Popular Link</h5>
+                        <a class="btn btn-link" href="/chat">Q/A Section</a>
+                        <a class="btn btn-link" href="#FAQs">Terms & Condition</a>
+                        <a class="btn btn-link" href="#FAQs">Help</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h5 class="text-white mb-4">Newsletter</h5>
+                        <p>Stay informed with WoW FinGPT Newsletter, delivering expert market insights,predictive analysis.</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" >WowFingpt</a>, All Right Reserved. </a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="#FAQs">Cookies</a>
+                                <a href="#FAQs">Help</a>
+                                <a href="#FAQs">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/lib/wow/wow.min.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>

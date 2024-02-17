@@ -58,11 +58,13 @@ def predict():
     forecast_low = auto_arima_low.predict(n_periods=days)
     
     return jsonify({'close': forecast_close.tolist(), 'open': forecast_open.tolist(), 'low': forecast_low.tolist()})
-
 @app.route("/chat/<prompt>")
 def chat_data(prompt):
-    text = json.loads(requests.get("http://vamsishaik.pythonanywhere.com/prompt?user="+prompt).content)['response']
+    new_api_url = "https://shahir321123.pythonanywhere.com/analyze?query={}".format(prompt)
+    text = json.loads(requests.get(new_api_url).content)['response']
     return text
+
+
 
 @app.route("/mail", methods=["POST"])
 def send_mail():

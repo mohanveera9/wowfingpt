@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify, redirect
+from flask import Flask, request, render_template, jsonify
 import yfinance as yf
 import pmdarima as pm
 from datetime import date
@@ -25,6 +25,9 @@ def load_data(ticker, start_date, end_date):
 def index():
     return render_template('index.html')
 
+@app.route('/use')
+def use():
+    return render_template('use.html')
 
 @app.route('/whitepaper')
 def example():
@@ -37,12 +40,6 @@ def chat():
 @app.route('/prediction')
 def prediction():
     return render_template('prediction.html')
-
-
-@app.route('/wowtalk')
-def wowtalk():
-    return redirect("http://8thwall.com/navinmanaswi/talk2me")
-
 
 @app.route('/predict', methods=['GET'])
 def predict():
@@ -67,48 +64,48 @@ def chat_data(prompt):
     text = json.loads(requests.get("http://vamsishaik.pythonanywhere.com/prompt?user="+prompt).content)['response']
     return text
 
-# @app.route("/mail", methods=["POST"])
-# def send_mail():
-#     smtp_server = 'smtp.gmail.com'
-#     smtp_port = 587
-#     sender_email = 'your_email_here'
+@app.route("/mail", methods=["POST"])
+def send_mail():
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    sender_email = 'codewithsam110g@gmail.com'
 
-#     # Gmail account credentials
-#     gmail_username = 'your_email_here'
-#     gmail_password = 'your_email_app_password_not_email_password'
+    # Gmail account credentials
+    gmail_username = 'codewithsam110g@gmail.com'
+    gmail_password = 'jyjypahyogheoylx'
 
-#     # Extract data from the form
-#     name = request.form.get('name')
-#     email = request.form.get('email')
-#     message_content = request.form.get('message')
+    # Extract data from the form
+    name = request.form.get('name')
+    email = request.form.get('email')
+    message_content = request.form.get('message')
 
-#     # Construct the email body
-#     subject = f'White Paper requested by {name}'
-#     body = f'Name: {name}\nEmail: {email}\nMessage: {message_content}'
+    # Construct the email body
+    subject = f'White Paper requested by {name}'
+    body = f'Name: {name}\nEmail: {email}\nMessage: {message_content}'
 
-#     TO = "to_mail_here"
-#     BODY = '\r\n'.join(['To: %s' % TO,
-#                                 'From: %s' % sender_email,
-#                                 'Subject: %s' % subject,
-#                                 '', body])
+    TO = "beautiful110g@gmail.com"
+    BODY = '\r\n'.join(['To: %s' % TO,
+                                'From: %s' % sender_email,
+                                'Subject: %s' % subject,
+                                '', body])
 
-#     try:
-#         # Establish a connection to the SMTP server
-#         server = smtplib.SMTP(smtp_server, smtp_port)
+    try:
+        # Establish a connection to the SMTP server
+        server = smtplib.SMTP(smtp_server, smtp_port)
 
-#         server.ehlo()
-#         server.starttls()
+        server.ehlo()
+        server.starttls()
 
-#         # Login to your Gmail account
-#         server.login(gmail_username, gmail_password)
+        # Login to your Gmail account
+        server.login(gmail_username, gmail_password)
 
-#         # Send the email
-#         server.sendmail(sender_email, "train@wowexp.ai", BODY)
+        # Send the email
+        server.sendmail(sender_email, "train@wowexp.ai", BODY)
 
-#         # Quit the server
-#         server.quit()
+        # Quit the server
+        server.quit()
 
-#         return "Email sent successfully!"
+        return "Email sent successfully!"
 
-#     except Exception as e:
-#         return f"An error occurred: {e}"
+    except Exception as e:
+        return f"An error occurred: {e}"

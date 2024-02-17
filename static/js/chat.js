@@ -48,7 +48,7 @@ const MAX_QUESTIONS = 5;
 const showPreparingAnimation = () => {
   const html = `<div class="chat-content">
                     <div class="chat-details">
-                        <img src="/static/images/logo1.png" alt="chatbot-img">
+                        <img src="static/img/logo1.png" alt="chatbot-img">
                         <div class="preparing-animation">
                             <span class="material-symbols-rounded">⏳</span>
                             <span class="animation-text">Analyzing...</span><br>
@@ -65,6 +65,7 @@ const showPreparingAnimation = () => {
   chatContainer.scrollTo(0, chatContainer.scrollHeight);
   return incomingChatDiv;
 };
+
 
 const getChatResponse = (incomingChatDiv) => {
   const pElement = document.createElement("p");
@@ -106,7 +107,7 @@ const handleOutgoingChat = () => {
     const limitMessage = "You have completed your 5 questions for today.";
     const limitHtml = `<div class="chat-content">
                               <div class="chat-details">
-                                  <img src="/static/images/logo.jpg" alt="chatbot-img">
+                                  <img src="static/img/logo.jpg" alt="chatbot-img">
                                   <p class="bot">${limitMessage}</p>
                               </div>
                           </div>`;
@@ -115,10 +116,9 @@ const handleOutgoingChat = () => {
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
     return;
   }
-
   const html = `<div class="chat-content">
                     <div class="chat-details">
-                        <img src="/static/images/user.jpg" alt="user-img">
+                        <img src="static/img/user.jpg" alt="user-img">
                         <p>${userText}</p>
                     </div>
                 </div>`;
@@ -171,119 +171,6 @@ chatInput.addEventListener("keydown", (e) => {
 loadDataFromLocalstorage();
 sendButton.addEventListener("click", handleOutgoingChat);
 
-// Get reference to the suggestions button and suggestion cards
-const suggestionsBtn = document.getElementById("suggestions");
-const suggestionCards = document.querySelectorAll(
-  ".suggestions-cards .suggestion-card"
-);
-
-// Function to generate random finance-related questions
-function generateRandomQuestions() {
-  const financeQuestions = [
-    "What are the key elements of financial planning?",
-    "How does compound interest work in saving and investing?",
-    "What are the risks involved in the stock market?",
-    "How to create an effective budget for personal finance?",
-    "What are the different types of investment options available?",
-    // Add more finance-related questions as needed
-  ];
-
-  // Shuffle the questions to get a random order
-  const shuffledQuestions = financeQuestions.sort(() => Math.random() - 0.5);
-
-  // Display three randomly selected questions in suggestion cards
-  for (let i = 0; i < 3; i++) {
-    suggestionCards[i].innerText = shuffledQuestions[i];
-    suggestionCards[i].style.display = "block";
-  }
-}
-
-// Function to handle suggestion button click
-function handleSuggestionsClick() {
-  // Toggle display of suggestion cards
-  const suggestionsContainer = document.querySelector(".suggestions-container");
-  suggestionsContainer.classList.toggle("show-suggestions");
-
-  // Generate random questions and display them in cards
-  if (suggestionsContainer.classList.contains("show-suggestions")) {
-    generateRandomQuestions();
-  } else {
-    // Hide suggestion cards if button clicked again
-    suggestionCards.forEach((card) => {
-      card.style.display = "none";
-    });
-  }
-}
-
-// Add event listener to the suggestions button
-suggestionsBtn.addEventListener("click", handleSuggestionsClick);
-
-// Function to handle clicking on a suggestion card
-suggestionCards.forEach((card) => {
-  card.addEventListener("click", function () {
-    // Get the text from the clicked card and set it to the input box
-    const inputBox = document.getElementById("chat-input");
-    inputBox.value = card.innerText;
-  });
-});
-// ... (previous JavaScript code) ...
-
-// Get reference to the tip button and tip cards
-const tipBtn = document.getElementById("tip");
-const tipCards = document.querySelectorAll(".tips-container .tip-card");
-
-// Function to generate random finance-related tips
-function generateRandomTips() {
-  const financeTips = [
-    "Start saving early to take advantage of compound interest.",
-    "Diversify your investment portfolio to manage risk.",
-    "Set specific financial goals to stay focused on your priorities.",
-    "Regularly review your expenses and look for areas to cut unnecessary costs.",
-    "Consider automated savings to make it easier to save consistently.",
-    // Add more finance-related tips as needed
-  ];
-
-  // Shuffle the tips to get a random order
-  const shuffledTips = financeTips.sort(() => Math.random() - 0.5);
-
-  // Display three randomly selected tips in tip cards
-  for (let i = 0; i < 3; i++) {
-    tipCards[i].innerText = shuffledTips[i];
-    tipCards[i].style.display = "block";
-  }
-}
-
-// Function to handle tip button click
-function handleTipClick() {
-  // Toggle display of tip cards
-  const tipsContainer = document.querySelector(".tips-container");
-  tipsContainer.classList.toggle("show-tips");
-
-  // Generate random tips and display them in cards
-  if (tipsContainer.classList.contains("show-tips")) {
-    generateRandomTips();
-  } else {
-    // Hide tip cards if button clicked again
-    tipCards.forEach((card) => {
-      card.style.display = "none";
-    });
-  }
-}
-
-// Add event listener to the tip button
-tipBtn.addEventListener("click", handleTipClick);
-
-// ... (remaining JavaScript code) ...
-
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-
-menuToggle.addEventListener("click", function () {
-  menuToggle.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
-
-// ... (previous code)
 
 const endChatSession = () => {
   const endMessage = "Chat session has ended.";
@@ -291,7 +178,7 @@ const endChatSession = () => {
   const endChatHtml = `
       <div class="chat-content">
           <div class="chat-details">
-              <img src="/static/images/logo.jpg" alt="chatbot-img">
+              <img src="static/img/logo.jpg" alt="chatbot-img">
               <div class="chat-text">
                   <p>${endMessage}</p>
               </div>

@@ -27,7 +27,7 @@
   </style>
 </head>
 
-<body>
+<body style="background:#def7e5;">
 
 <!--Spinner-->
   <div id="spinner" class="bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -40,7 +40,7 @@
 <!-- Navbar & Hero Start -->
 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style="background: #00B98E;">
   <a href="/" class="navbar-brand p-0">
-      <h1 class="m-0">WoW FinGPT</h1>
+      <h1 class="m-0" style="padding-top: 20px; padding-bottom: 20px;">WoW FinGPT</h1>
       <!-- <img src="img/logo.png" alt="Logo"> -->
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -48,42 +48,14 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav ms-auto py-0">
-          <a href="index.html" class="nav-item nav-link suggestion-link" style="color: white;font-weight: 800;">Suggestions</a>
-          <a href="#about" class="nav-item nav-link tip-link" style="color: white; font-weight: 800;">Tips</a>
+          <a href="index.html" class="nav-item nav-link suggestion-link" style="color: white;font-weight: 800; display: none;" >Suggestions</a>
+          <a href="#about" class="nav-item nav-link tip-link" style="color: white; font-weight: 800;display: none;">Tips</a>
       </div>
       <a href="/" class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">Go To Home</a>
   </div>
 </nav>
   <!-- Chats container -->
-
-
-
-  <div class="suggestions-container">
-    <div class="suggestions-cards">
-      <div class="suggestion-card" style="display: none;"></div>
-      <div class="suggestion-card" style="display: none;"></div>
-      <div class="suggestion-card" style="display: none;"></div>
-    </div>
-  </div>
-
-  <!-- ... (previous HTML) ... -->
-  <div class="tips-container">
-    <div class="tip-cards">
-      <div class="tip-card" style="display: none;"></div>
-      <div class="tip-card" style="display: none;"></div>
-      <div class="tip-card" style="display: none;"></div>
-    </div>
-  </div>
-
-
-  <!-- ... (remaining HTML) ... -->
-
   <div class="chat-container"></div>
-  <!-- ... (previous HTML) ... -->
-
-  <!-- ... (remaining HTML) ... -->
-
-
   <!-- Typing container -->
   <div class="typing-container">
 

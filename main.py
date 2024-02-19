@@ -58,56 +58,15 @@ def predict():
     forecast_low = auto_arima_low.predict(n_periods=days)
     
     return jsonify({'close': forecast_close.tolist(), 'open': forecast_open.tolist(), 'low': forecast_low.tolist()})
+
+def get_response_from_api(prompt):
+    api_url = f"https://shahir321123.pythonanywhere.com/analyze?query={prompt}"
+    response = requests.get(api_url)
+    response.raise_for_status() # Raises an exception if the response status code is not 200
+    return response.json().get('response', 'Oops! Something went wrong.')
+
 @app.route("/chat/<prompt>")
 def chat_data(prompt):
-    new_api_url = "https://shahir321123.pythonanywhere.com/analyze?query={}".format(prompt)
-    text = json.loads(requests.get(new_api_url).content)['response']
-    return text
+    response = get_response_from_api(prompt)
+    return response
 
-
-
-@app.route("/mail", methods=["POST"])
-def send_mail():
-    smtp_server = 'smtp.gmail.com'
-    smtp_port = 587
-    sender_email = 'codewithsam110g@gmail.com'
-
-    # Gmail account credentials
-    gmail_username = 'codewithsam110g@gmail.com'
-    gmail_password = 'jyjypahyogheoylx'
-
-    # Extract data from the form
-    name = request.form.get('name')
-    email = request.form.get('email')
-    message_content = request.form.get('message')
-
-    # Construct the email body
-    subject = f'White Paper requested by {name}'
-    body = f'Name: {name}\nEmail: {email}\nMessage: {message_content}'
-
-    TO = "beautiful110g@gmail.com"
-    BODY = '\r\n'.join(['To: %s' % TO,
-                                'From: %s' % sender_email,
-                                'Subject: %s' % subject,
-                                '', body])
-
-    try:
-        # Establish a connection to the SMTP server
-        server = smtplib.SMTP(smtp_server, smtp_port)
-
-        server.ehlo()
-        server.starttls()
-
-        # Login to your Gmail account
-        server.login(gmail_username, gmail_password)
-
-        # Send the email
-        server.sendmail(sender_email, "train@wowexp.ai", BODY)
-
-        # Quit the server
-        server.quit()
-
-        return "Email sent successfully!"
-
-    except Exception as e:
-        return f"An error occurred: {e}"
